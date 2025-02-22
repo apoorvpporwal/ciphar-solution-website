@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Cipher Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white p-5 text-black flex justify-between items-center shadow-lg">
+        <div class="flex items-center">
+            <img src="{{ url_for('static', filename='images/contact-bg.png') }}" alt="Cipher Solutions Logo" class="h-10 w-auto mr-3">
+            <span class="text-2xl font-bold">Cipher Solutions</span>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-2xl">&#9776;</button>
+        <ul id="nav-menu" class="hidden md:flex space-x-6 text-lg">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/about" class="hover:underline">About</a></li>
+            <li><a href="/services" class="hover:underline">Services</a></li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Hero Section -->
+    <header class="relative bg-cover bg-center text-white text-center py-32 px-5" style="background-image: url('{{ url_for('static', filename='images/hero-bg.jpg') }}');">
+        <div class="bg-black bg-opacity-50 py-20 px-6">
+            <h1 class="text-4xl md:text-5xl font-extrabold">Your Partner in Technology Excellence</h1>
+            <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">cipher solutions is a leading IT service provider, offering innovative and customized technology solutions to help businesses thrive in a digital world.</p>
+            <a href="/services" class="mt-6 inline-block bg-white text-black font-semibold py-3 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition">Explore Services</a>
+        </div>
+    </header>
+
+    <!-- Our Mission Section -->
+    <section class="py-16 bg-white text-center">
+        <h2 class="text-3xl  font-bold text-gray-800">Our Mission</h2>
+        <div class="mt-8 flex flex-wrap justify-center gap-10 px-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/3">
+                <h3 class="text-xl font-semibold">Innovation and Technology Excellence</h3>
+                <p class="text-gray-600 mt-2">We are committed to staying ahead of industry trends, continuously evolving our solutions to meet the dynamic needs of our clients, using the latest technologies to solve complex challenges.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/3">
+                <h3 class="text-xl font-semibold">Client-Centric Approach</h3>
+                <p class="text-gray-600 mt-2">Our success is built on strong partnerships. We focus on understanding our clients’ unique requirements, offering tailored solutions and proactive support to ensure long-term satisfaction and business success.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/3">
+                <h3 class="text-xl font-semibold">Empowering Your Digital Future</h3>
+                <p class="text-gray-600 mt-2">We combine innovation, expertise, and personalized support to help businesses thrive in the digital world.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16 bg-gray-50 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Why Choose Us?</h2>
+        <div class="mt-8 flex flex-wrap justify-center gap-10 px-6">
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/3">
+                <h3 class="text-xl font-semibold">Expert Team</h3>
+                <p class="text-gray-600 mt-2">Our skilled professionals ensure top-quality service tailored to your needs.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/3">
+                <h3 class="text-xl font-semibold">Cost-Effective Solutions</h3>
+                <p class="text-gray-600 mt-2">We offer competitive pricing without compromising on quality, delivering excellent value for money.</p>
+            </div>
+            <div class="bg-white shadow-lg rounded-lg p-6 w-full md:w-1/3">
+                <h3 class="text-xl font-semibold">Customer-Centric Approach</h3>
+                <p class="text-gray-600 mt-2">We prioritize customer satisfaction, providing personalized support to exceed your expectations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-4 mt-10">
+        <p>&copy; 2025 Cipher Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

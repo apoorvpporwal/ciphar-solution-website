@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Cipher Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white p-5 text-black flex justify-between items-center shadow-lg">
+        <div class="flex items-center">
+            <img src="{{ url_for('static', filename='images/contact-bg.png') }}" alt="Cipher Solutions Logo" class="h-10 w-auto mr-3">
+            <span class="text-2xl font-bold">Cipher Solutions</span>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-2xl">&#9776;</button>
+        <ul id="nav-menu" class="hidden md:flex space-x-6 text-lg">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/about" class="hover:underline">About</a></li>
+            <li><a href="/services" class="hover:underline">Services</a></li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Services Section -->
+    <section class="py-16 text-center bg-white px-6">
+        <h2 class="text-4xl font-bold text-gray-800">Our Services</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">We offer a wide range of technology-driven services tailored to meet your business needs.</p>
+    </section>
+
+    <!-- Services List -->
+    <section class="py-16 space-y-12">
+        <!-- IT Services -->
+        <div class="bg-gray-50 flex flex-col md:flex-row items-center text-center md:text-left px-6">
+            <div class="w-full md:w-1/2 p-6">
+                <h3 class="text-3xl font-bold">IT Services</h3>
+                <p class="text-gray-600 mt-4">IT services provide businesses with technical support, network management, software development, and cybersecurity solutions to ensure smooth operations.</p>
+            </div>
+            <div class="w-full md:w-1/2 p-6 flex justify-center">
+                <img src="{{ url_for('static', filename='images/it-services.png') }}" alt="IT Services" class="w-72 md:w-80 rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <!-- Industrial Automation -->
+        <div class="bg-white flex flex-col md:flex-row-reverse items-center text-center md:text-left px-6">
+            <div class="w-full md:w-1/2 p-6">
+                <h3 class="text-3xl font-bold">Industrial Automation</h3>
+                <p class="text-gray-600 mt-4">Industrial automation uses advanced technology to control processes and machinery, enhancing efficiency, reducing labor, and improving production consistency.</p>
+            </div>
+            <div class="w-full md:w-1/2 p-6 flex justify-center">
+                <img src="{{ url_for('static', filename='images/industrial-automation.png') }}" alt="Industrial Automation" class="w-72 md:w-80 rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <!-- Design Engineering -->
+        <div class="bg-gray-50 flex flex-col md:flex-row items-center text-center md:text-left px-6">
+            <div class="w-full md:w-1/2 p-6">
+                <h3 class="text-3xl font-bold">Design Engineering</h3>
+                <p class="text-gray-600 mt-4">Design engineering involves creating innovative solutions by blending creativity, technical knowledge, and problem-solving skills to develop functional products or systems.</p>
+            </div>
+            <div class="w-full md:w-1/2 p-6 flex justify-center">
+                <img src="{{ url_for('static', filename='images/design-engineering.png') }}" alt="Design Engineering" class="w-72 md:w-80 rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <!-- Digital Marketing -->
+        <div class="bg-white flex flex-col md:flex-row-reverse items-center text-center md:text-left px-6">
+            <div class="w-full md:w-1/2 p-6">
+                <h3 class="text-3xl font-bold">Digital Marketing</h3>
+                <p class="text-gray-600 mt-4">Digital marketing involves promoting products or services online using strategies like SEO, social media, email campaigns, and advertising.</p>
+            </div>
+            <div class="w-full md:w-1/2 p-6 flex justify-center">
+                <img src="{{ url_for('static', filename='images/digital-marketing.png') }}" alt="Digital Marketing" class="w-72 md:w-80 rounded-lg shadow-lg">
+            </div>
+        </div>
+
+        <!-- Placement Services -->
+        <div class="bg-gray-50 flex flex-col md:flex-row items-center text-center md:text-left px-6">
+            <div class="w-full md:w-1/2 p-6">
+                <h3 class="text-3xl font-bold">Placement Services</h3>
+                <p class="text-gray-600 mt-4">A placement provides hands-on experience in a professional setting, helping students apply their skills and gain industry knowledge.</p>
+            </div>
+            <div class="w-full md:w-1/2 p-6 flex justify-center">
+                <img src="{{ url_for('static', filename='images/placement.png') }}" alt="Placement Services" class="w-72 md:w-80 rounded-lg shadow-lg">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-4 mt-10">
+        <p>&copy; 2025 Cipher Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

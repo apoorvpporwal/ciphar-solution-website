@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Cipher Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white p-5 text-black flex justify-between items-center shadow-lg">
+        <div class="flex items-center">
+            <img src="{{ url_for('static', filename='images/contact-bg.png') }}" alt="Cipher Solutions Logo" class="h-10 w-auto mr-3">
+            <span class="text-2xl font-bold">Cipher Solutions</span>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-2xl">&#9776;</button>
+        <ul id="nav-menu" class="hidden md:flex space-x-6 text-lg">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/about" class="hover:underline">About</a></li>
+            <li><a href="/services" class="hover:underline">Services</a></li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Privacy Policy Content -->
+    <section class="max-w-4xl mx-auto my-12 p-6 bg-white shadow-lg rounded-lg text-center md:text-left">
+        <h1 class="text-3xl font-bold mb-4">Privacy Policy</h1>
+        <p class="text-gray-700">
+            Welcome to Cipher Solutions. Your privacy is important to us. This Privacy Policy explains how we collect, use, and protect your information.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-6">1. Information We Collect</h2>
+        <p class="text-gray-700">
+            We collect personal information such as your name, email, phone number, and any message you submit through our contact form.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-6">2. How We Use Your Information</h2>
+        <p class="text-gray-700">
+            We use your information to respond to inquiries, provide services, and improve our website experience. We do not sell or share your data with third parties.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-6">3. Data Security</h2>
+        <p class="text-gray-700">
+            We implement security measures to protect your personal information. However, no online transmission is 100% secure.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-6">4. Cookies and Tracking</h2>
+        <p class="text-gray-700">
+            We may use cookies to enhance your browsing experience. You can disable cookies in your browser settings.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-6">5. Third-Party Links</h2>
+        <p class="text-gray-700">
+            Our website may contain links to third-party sites. We are not responsible for their privacy policies.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-6">6. Changes to This Policy</h2>
+        <p class="text-gray-700">
+            We may update this Privacy Policy. Any changes will be posted on this page.
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-6">7. Contact Us</h2>
+        <p class="text-gray-700">
+            If you have any questions about this Privacy Policy, contact us at <strong>yourbusiness@gmail.com</strong>.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-4 mt-10">
+        <p>&copy; 2025 Cipher Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

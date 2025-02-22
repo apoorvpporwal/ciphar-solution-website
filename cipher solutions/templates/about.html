@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cipher Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <!-- Navbar -->
+    <nav class="bg-white p-5 text-black flex justify-between items-center shadow-lg">
+        <div class="flex items-center">
+            <img src="{{ url_for('static', filename='images/contact-bg.png') }}" alt="Cipher Solutions Logo" class="h-10 w-auto mr-3">
+            <span class="text-2xl font-bold">Cipher Solutions</span>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-2xl">&#9776;</button>
+        <ul id="nav-menu" class="hidden md:flex space-x-6 text-lg">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/about" class="hover:underline">About</a></li>
+            <li><a href="/services" class="hover:underline">Services</a></li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- About Us Section -->
+    <section class="py-16 text-center bg-white px-6">
+        <h2 class="text-4xl font-bold text-gray-800">About Us</h2>
+        <p class="mt-10 text-lg text-black max-w-2xl mx-auto">Welcome to Cipher Tech, where technology meets innovation. We are a dedicated team of IT professionals passionate about providing top-notch technology solutions to businesses of all sizes.</p>
+    </section>
+
+    <!-- Our Mission -->
+    <section class="py-16 bg-gray-50 flex flex-col md:flex-row items-center text-center md:text-left">
+        <div class="w-full md:w-1/2 px-6">
+            <h3 class="text-3xl font-bold">Our Mission</h3>
+            <p class="text-black mt-6">At Cipher Tech, our mission is to empower organizations by leveraging the power of technology. We strive to deliver exceptional IT services that enhance efficiency, drive growth, and improve overall business performance.</p>
+        </div>
+        <div class="w-full md:w-1/2 px-6 flex justify-center">
+            <img src="{{ url_for('static', filename='images/mission.png') }}" alt="Our Mission" class="w-72 md:w-80 rounded-lg shadow-lg">
+        </div>
+    </section>
+
+    <!-- Our Approach -->
+    <section class="py-16 bg-white flex flex-col md:flex-row-reverse items-center text-center md:text-left">
+        <div class="w-full md:w-1/2 px-6">
+            <h3 class="text-3xl font-bold">Our Approach</h3>
+            <p class="text-black mt-6">We believe in a client-centric approach. Our team works closely with you to understand your unique challenges and goals. By providing personalized solutions and ongoing support, we ensure that your technology serves as a strategic advantage.</p>
+        </div>
+        <div class="w-full md:w-1/2 px-6 flex justify-center">
+            <img src="{{ url_for('static', filename='images/approach.png') }}" alt="Our Approach" class="w-72 md:w-80 rounded-lg shadow-lg">
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="py-16 bg-gray-50 flex flex-col md:flex-row items-center text-center md:text-left">
+        <div class="w-full md:w-1/2 px-6">
+            <h3 class="text-3xl font-bold">Our Team</h3>
+            <p class="text-black mt-6">Our team consists of highly skilled professionals with extensive experience across various IT disciplines. We are committed to continuous learning and staying ahead of industry trends, allowing us to deliver innovative solutions that drive success.</p>
+        </div>
+        <div class="w-full md:w-1/2 px-6 flex justify-center">
+            <img src="{{ url_for('static', filename='images/team.png') }}" alt="Our Team" class="w-72 md:w-80 rounded-lg shadow-lg">
+        </div>
+    </section>
+
+    <!-- Why Choose Us? -->
+    <section class="py-16 bg-white flex flex-col md:flex-row-reverse items-center text-center md:text-left">
+        <div class="w-full md:w-1/2 px-6">
+            <h3 class="text-3xl font-bold">Why Choose Us?</h3>
+            <p class="text-black mt-6">
+                1. <b>Expertise:</b> With years of experience, we bring a wealth of knowledge to every project.<br>
+                2. <b>Customer Focused:</b> Your satisfaction is our priority. We listen, understand, and adapt to your needs.<br>
+                3. <b>Innovative Solutions:</b> We leverage the latest technologies to provide cutting-edge solutions.<br>
+                4. <b>Reliable Support:</b> Our support team is available 24/7 to assist you whenever you need help.
+            </p>
+        </div>
+        <div class="w-full md:w-1/2 px-6 flex justify-center">
+            <img src="{{ url_for('static', filename='images/why-choose-us.png') }}" alt="Why Choose Us?" class="w-72 md:w-80 rounded-lg shadow-lg">
+        </div>
+    </section>
+
+    <!-- Join Us on Our Journey -->
+    <section class="py-16 bg-gray-50 text-center px-6">
+        <h2 class="text-3xl font-bold text-gray-800">Join Us on Our Journey</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+            At Cipher Tech Solutions, we are excited about the future of technology and the opportunities it brings. Whether you’re a small startup or a large enterprise, we’re here to help you navigate the digital landscape.<br><br>
+            <b>Contact us today</b> to learn more about how we can assist you!
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-4 mt-10">
+        <p>&copy; 2025 Cipher Solutions. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.getElementById('nav-menu').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>

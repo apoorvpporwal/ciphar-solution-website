@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Cipher Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="bg-white p-5 text-black flex justify-between items-center shadow-lg">
+        <div class="flex items-center">
+            <img src="{{ url_for('static', filename='images/contact-bg.png') }}" alt="Cipher Solutions Logo" class="h-10 w-auto mr-3">
+            <span class="text-2xl font-bold">Cipher Solutions</span>
+        </div>
+        <button id="menu-toggle" class="md:hidden text-2xl">&#9776;</button>
+        <ul id="nav-menu" class="hidden md:flex space-x-6 text-lg">
+            <li><a href="/" class="hover:underline">Home</a></li>
+            <li><a href="/about" class="hover:underline">About</a></li>
+            <li><a href="/services" class="hover:underline">Services</a></li>
+            <li><a href="/contact" class="hover:underline">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="py-16 px-6">
+        <div class="max-w-6xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden flex flex-wrap">
+
+            <!-- Left Side: Message -->
+            <div class="w-full md:w-1/2 bg-white-600 text-white p-10 flex items-center bg-cover bg-center" style="background-image: url('/static/images/hero-bg.jpg');">
+                <div class="bg-black bg-opacity-70 p-6 rounded-lg">
+                    <h2 class="text-4xl font-bold">Let's Connect</h2>
+                    <p class="mt-4 text-lg">We’d love to hear from you! Whether you have questions, need support, or just want to say hi, feel free to reach out.</p>
+                </div>
+            </div>
+            
+
+            <!-- Right Side: Form -->
+            <div class="w-full md:w-1/2 p-10">
+                <h2 class="text-3xl font-bold text-gray-800">Get in Touch</h2>
+                <form action="/contact" method="POST" class="mt-6 space-y-4">
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <input type="text" name="first_name" placeholder="First Name" required class="w-full md:w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+                        <input type="text" name="last_name" placeholder="Last Name" required class="w-full md:w-1/2 p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+                    </div>
+                    
+                    <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+                    
+                    <input type="email" name="email" placeholder="Email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400">
+                    
+                    <textarea name="message" placeholder="Your Message" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-400"></textarea>
+                    
+                    <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section class="py-10 bg-gray-50 text-center">
+        <h2 class="text-3xl font-bold text-gray-800">Privacy Policy</h2>
+        <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+            We value your privacy. Your information is secure and will not be shared with third parties. Read our full <a href="/privacy-policy" class="text-blue-600 hover:underline">Privacy Policy</a>.
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white text-center p-4 mt-10">
+        <p>&copy; 2025 Cipher Solutions. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
